@@ -19,7 +19,7 @@
                 Date
             </label>
             <div class="input-group">
-                <input type='text' class="form-control" id="hijri-date-input" />
+                <input type='text' class="form-control" placeholder="YY-MM-DD" id="hijri-date-input" oninput="inputdate(this)"  />
             </div>
         </div>
     </div>
@@ -28,15 +28,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
     <script src="js/bootstrap-hijri-datetimepicker.min.js"></script>
     <script type="text/javascript">
-        // $(function() {
-
-        //     $("#hijri-date-input").hijriDatePicker();
-
-        // });
 
         $('#hijri-date-input').hijriDatePicker({
-        hijri:true
-    });
+            hijri: true,
+            showSwitcher: false,
+        });
+        function inputdate(data){
+            $('#hijri-date-input').val('')
+            // alert(data.value);
+        }
     </script>
 
 </body>
