@@ -19,7 +19,7 @@
                 Date
             </label>
             <div class="input-group">
-                <input type='text' class="form-control hijri-date-input" inputmode="none" placeholder="YY-MM-DD" id="hijri-date-input" oninput="inputdate(this)" />
+                <input type='text' class="form-control hijri-date-input" placeholder="YY-MM-DD" id="hijri-date-input" oninput="inputdate(this)" />
             </div>
         </div>
     </div>
@@ -32,6 +32,11 @@
             hijri: true,
             showSwitcher: false,
         });
+
+        $(document).ready(function() {
+            $('.hijri-date-input').attr('inputmode', 'none');
+
+        })
 
         function inputdate(data) {
             data.value = '';
